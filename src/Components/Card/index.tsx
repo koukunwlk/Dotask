@@ -37,11 +37,11 @@ export const Card = ({
       leave="transition-all duration-500"
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
-      className="w-3/12 bg-cardBackground m-6 rounded-lg flex flex-col gap-4 items-center justify-around drop-shadow-lg max-h-[80%]"
+      className="w-10/12 lg:w-3/12 sm:w-6/12 bg-cardBackground m-6 rounded-lg flex flex-col gap-4 items-center justify-around drop-shadow-lg max-h-[90%]"
     >
         <div className="flex flex-row-reverse justify- items-baseline w-full">
           <IoMdTrash
-            className="cursor-pointer w-6 h-6"
+            className="cursor-pointer w-6 h-6 "
             onClick={() => {
               setIsShowing(false)
               setTimeout(()=> {
@@ -72,6 +72,7 @@ export const Card = ({
           style={{ background: `url(${addTaskIcon}) no-repeat left` }}
           placeholder="type some task"
           className="pl-7 p-2 rounded-md w-[90%] outline-none  text-center shadow-lg"
+          autoFocus={true}
         />
     </Transition>
   );
